@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+main{
+    width: 350px;
+    display: flex;
+    background: #1D3036;
+    height: 90%;
+    border-radius: 15px;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.HomeSection1{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Section1Text{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Section1Img{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.HomeSection1 > .Section1Img > img{
+    width: 25%;
+    
+}
+
+.HomeSection2{
+    width: 100%;
+    height: 30%;
+}
+
+.HomeSection2 >img{
+    width: 100%;
+    height: 100%;
+}
+
+.HomeSection3{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.HomeSection3 > .HomeSection3text{
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.HomeSection3 > .HomeSection3Htext{
+    font-size: large;
+}
+
+.HomeSection4{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.HomeSection4 > .HomeSection4Img > img{
+    width: 70px;
+}
+
+.HomeSection4 .HomeSection4Text{
+    font-size: 15px;
+}

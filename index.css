@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #1D3036;
+    --text-color: #fff;
+    --primary-color: #63ff69;
+    --secondary-color: #000;
+    --alpha-color: #00000080;
+    --shadow: 0 15px 40px var(#00000080);
+}
+
+html{
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    max-width: 400px;
+    height: 97vh;
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    position: relative;
+    background: #000;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* home section */
+
+.Home{
+    width: 100%;
+    height: 90%;
+    padding: 20px;
+    overflow-y: auto;
+    /* border-radius: 10px; */
+}
+
+.carousel{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.carousel img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.HeadText{
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Box-Group{
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+}
+
+.Box-Card{
+    flex: 0 0 auto;
+    max-width: 150px;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.Box-Card-img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.Box-Card-text{
+    width: 100%;
+    text-align: justify;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.music-player-section{
+    width: 360px;
+    height: 110px;
+    background: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 50;
+    bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 1s;
+}
+
+.Seekbar-Container{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#Seekbar{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.Seekbar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 10px;
+    width: 5px;
+    background: var(--primary-color);
+    cursor: pointer;
+    box-shadow: -400px 0 0 400px var(--primary-color);
+}
+
+#Music-Counter{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ArtistNameAndSong{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#Current-Song-Name, #Current-Artist-Name{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Controls{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Controls img{
+    width: 30px;
+}
+
+.Controls > .Backward{
+    width: 50px;
+}
+.Controls > .Pause{
+    width: 50px;
+}
+.Controls > .Forward{
+    width: 50px;
+}
+
+.Controls > .Play{
+    width: 50px;
+} 
+
+.Controls .Pause.NoActive{
+    display: none;
+}
+
+.Controls .Pause.Active{
+    display: block;
+}
+
+.Controls .Play.NoActive{
+    display: none;
+}
+
+.Controls .Play.Active{
+    display: block;
+}
+
+/* Active / maximized view */
+
+
+.music-player-section.Active{
+    height: 97.3%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: fixed;
+    left: 38.3%;
+    bottom: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 20px;
+    transition: 1s;
+    /* cursor: pointer; */
+}
+
+.music-player-section .hide{
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+
+.music-player-section.Active .hide{
+    display: block;
+    opacity: 1;
+}
+
+.music-player-section.Active .Navbtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* height: 50px; */
+    transition: 1s;
+}
+
+.music-player-section.Active .Navbtn > img{
+    width: 30px;
+}
+
+.music-player-section.Active .Trademark{
+    font-size: 20px;
+    text-align: center;
+    /* margin-top: 20px; */
+}
+
+.music-player-section.Active .Music-Image{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 30px;
+} 
+
+.music-player-section.Active .Current-Song-Name{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.music-player-section.Active .Current-Artist-Name{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.music-player-section.Active .ArtistNameAndSong{
+    /* height: 30px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.music-player-section.Active .Volume{
+    margin-top: 30px;
+    width: 200px;
+}
+
+.music-player-section.Active .Controls img{
+    width: 40px;
+}
+
+.music-player-section.Active .Controls{
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-player-section.Active .Controls > .Backward{
+    width: 65px;
+}
+.music-player-section.Active .Controls > .Pause{
+    width: 65px;
+}
+.music-player-section.Active .Controls > .Play{
+    width: 65px;
+}
+.music-player-section.Active .Controls > .Forward{
+    width: 65px;
+}
+
+/* TrackList Section */
+
+.Tracklist{
+    height: 97.3%;
+    /* padding: 30px; */
+    width: 400px;
+    position: fixed;
+    left: 38.3%;
+    bottom: 10px;
+    padding: 20px 20px;
+    background: black;
+    opacity: 1;
+    z-index: 3;
+    transition: 1s;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    display: none;
+}
+
+.Tracklist.Active{
+    display: block;
+    transition: 1s;
+}
+
+.Tracklist-Top{
+    display: flex;
+    width: 100%;
+    height: 10%;
+}
+
+.Tracklist .Tracklist-BackBtn{
+    width: 10%;
+    height: 100%;
+    margin-right: 100px;
+}
+
+.Tracklist .Tracklist-Title{
+    font-size: 30px;
+    /* text-align: center; */
+    width: 90%;
+    margin-top: 20px;
+}
+
+.Tracklist-Bottom{
+    width: 100%;
+    height: 90%;
+}
+
+.Queue{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.Queue-Cover{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    position: relative;
+}
+
+.Queue-Cover .Queue-Cover-Img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Queue-Cover .Queue-Cover-Pause{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.Queue.Active .Queue-Cover-Pause{
+    display: block;
+}
+
+.Queue-Song-Name{
+    font-size: 20px;
+    font-weight: bolder;
+}

@@ -1,0 +1,207 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./new.css">
+    <script src="https://kit.fontawesome.com/4e6ce01e29.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <audio src="" id="audio-source"></audio>
+
+    <section class="Home">
+        
+        <div class="carousel">
+            <img src="./files/images/cover1.png" alt="" width="100%" height="100%" id="ImageSlide">
+        </div>
+
+        <h1 class="HeadText">Recently Played</h1>
+
+        <div class="Box-Group">
+            <div class="Box-Card">
+                <img src="./files/images/cover2.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Afro Beat & You</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover3.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Global Music</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover4.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">RnB & U</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover5.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Amapiano Naija</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover6.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Top 100 Nigeria</p>
+            </div>
+        </div>
+
+        <h1 class="HeadText">Based on Your Taste</h1>
+
+        <div class="Box-Group">
+            <div class="Box-Card">
+                <img src="./files/images/cover7.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Top 100 Int'l</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover8.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Naija Gospel</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover9.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Rap Bangers</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover10.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Pop & U</p>
+            </div>
+            <div class="Box-Card">
+                <img src="./files/images/cover11.png" alt="" class="Box-Card-img">
+                <p class="Box-Card-text">Vibes Only</p>
+            </div>
+        </div>
+
+        <section class="music-player-section ">
+
+            <div class="Navbtn hide">
+            <img class="NavBack" src="./files/images/backward.png" alt="">
+            <p class="Trademark ">Curated By Group 1</p>
+            <img class="NavForward " src="./files/images/forward.png" alt="">
+            </div>
+
+            <img class="Music-Image hide" src="./files/images/holiday.png" alt="">
+
+            <div class="Seekbar-Container">
+                <input type="range" value="0" id="Seekbar" >
+                <div style="display: flex;">
+                    <div id="Music-Counter">00:00</div>
+                    <div id="Music-Duration">00:00</div>
+                </div>
+                
+            </div>
+            
+            <div class="ArtistNameAndSong">
+                <h1 id="Current-Artist-Name">Rema </h1>
+                <h1 id="Current-Song-Name"> - Holiday</h1>
+            </div>
+            
+            <input type="range" value="0" max="100" class="Volume hide">
+    
+            <div class="Controls Active">
+                <img class="RepeatAll Active" src="./files/images/repeatall.png" alt="">
+    
+                <img class="Backward Active" src="./files/images/backward.png" alt=""> 
+    
+                <img class="Play Active" src="./files/images/play.png" alt="">
+
+                <img class="Pause NoActive" src="./files/images/pause.png" alt="">
+    
+                <img class="Forward Active" src="./files/images/forward.png" alt="">
+    
+                <img class="Shuffle Active" src="./files/images/shuffle.png" alt="">
+    
+            </div>
+        </section>
+        
+        <section class="Tracklist ">
+
+            <div class="Tracklist-Top">
+
+            <img src="./files/images/backward.png" alt="" class="Tracklist-BackBtn icon">
+    
+            <h1 class="Tracklist-Title">Tracklist</h1>
+
+            </div>
+            
+            
+            <div class="Tracklist-Bottom ">
+
+                <div class="Queue Active">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/holiday.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Rema - Holiday</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/unfaithful.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Rihanna - Unfaithful</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/gwagwalada.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">BNXN - Gwagwalada</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/you.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Mavins - You</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/guy.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Spyro - Who's Your Guy</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/man.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Prinx Emmanuel - Man</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/higher.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Tems - Higher</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/lastlast.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">BurnaBoy - Last Last</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/asiwaju.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Ruger - Asiwaju</p>
+                </div>
+                <div class="Queue">
+                    <div class="Queue-Cover">
+                        <img class="Queue-Cover-Img" src="./files/images/holiday.png" alt="">
+                        <img class="Queue-Cover-Pause" src="./files/images/pause.png" alt="" width="60%">
+                    </div>
+                    <p class="Queue-Song-Name">Rema - Holiday</p>
+                </div>
+                
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <script src="./musicdata.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html> -->
